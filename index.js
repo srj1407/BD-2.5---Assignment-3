@@ -260,7 +260,7 @@ function sortHotelsByReviewsHighToLow(hotel1, hotel2) {
 app.get('/hotels/sort/reviews', (req, res) => {
   let reviews = req.query.reviews;
   let sortedHotels = hotels.slice();
-  if (reviews === 'high-to-low') {
+  if (reviews === 'most-to-least') {
     sortedHotels.sort(sortHotelsByReviewsHighToLow);
   } else {
     sortedHotels.sort(sortHotelsByReviewsLowToHigh);
